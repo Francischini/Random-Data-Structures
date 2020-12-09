@@ -29,8 +29,7 @@ int main(){
     struct Node* aux2 = NULL;
     int n, i, x, o;
     int count = 0, empty = 0;
-    int johnson = 0;
-	int vector[100]; /*Hopefully the user doesn't want to do more than 100 operations in this tree, otherwise we should not use ISO C90 and then fix it with a variable length array*/
+    int vector[100]; /*Hopefully the user doesn't want to do more than 100 operations in this tree, otherwise we should not use ISO C90 and then fix it with a variable length array*/
 
     scanf("%d", &n);
     
@@ -80,7 +79,7 @@ int main(){
         delete_LLRBTree(root,vector[i]);
     }
 
-	free_LLRBTree(root);
+    free_LLRBTree(root);
     empty = isEmpty_LLRBTree(root);
     printf("Deallocated Memory? %s\n", empty ? "true" : "false");
 
